@@ -18,10 +18,10 @@ def calc_gfr(scr, age, gender, ethnicity):
         gfr: Patient's eGFR in mL/min rounded to decimal places.
         
     """
-    if scr==0.0 or age==0.0:
+    if scr == 0.0 or age == 0.0:
         return 0
   
-    if gender=='F' and ethnicity=='African American':
+    if gender == 'F' and ethnicity == 'African American':
         egfr = round(175*(scr)**(-1.154) * age**(-0.203) * (0.742) * 1.212, 2)
     elif gender == 'F' and ethnicity != 'African American':
         egfr = round(175*(scr)**(-1.154) * age**(-0.203) * (0.742), 2)
