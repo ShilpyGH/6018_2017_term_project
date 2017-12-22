@@ -1,9 +1,10 @@
-Chronic Kidney Disease (CKD) patients in MIMIC II
-Shilpy Sharma, Parveen Ghani, Anjali Nandwani
-BMI 6018 Fall 2017 Term Project
+<h1>Chronic Kidney Disease (CKD) patients in MIMIC II</h1>
+<h3>Shilpy Sharma, Parveen Ghani, Anjali Nandwani</h3>
+<h4>BMI 6018 Fall 2017 Term Project</h4>
 
-Source of data - MIMIC II database
+<h3>Source of data - MIMIC II database</h3>
 
+<p>
 The MIMIC II (Multiparameter Intelligent Monitoring in Intensive Care) Database contains
 comprehensive clinical data obtained from hospital medical information systems, 
 for tens of thousands of Intensive Care Unit (ICU) patients. 
