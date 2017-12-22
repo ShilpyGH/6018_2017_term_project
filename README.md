@@ -33,12 +33,25 @@ It has widgets to calculate the estimated Glomerular Filteration Rate (eGFR) bas
 
 <h3>Project Goals: </h3>
 <p>
-1.	Extract all the patient with ICD 9 code for CKD
-2.	Extract the patient's age, gender, ethnicity who has CKD
-3.	Shows statistics of patient's ethnicity, age, gender and different kinds of CKDs.
-4.	Calculates the mean age of all the CKD patients.
-5.	Widget to calculate the eGFR, by manually inputing the data.
-6.	Cleans the excel file extracted from MIMIC II by dropping the missing values.
-7.	Calculates the eGFR, automatically for all the patients based on their age, gender, ethnicity and serum creatinine value
+       <ul>
+             <li>Extract all the patient with ICD 9 code for CKD</li>
+             <li>Extract the patient's age, gender, ethnicity who has CKD</li>
+             <li>Shows statistics of patient's ethnicity, age, gender and different kinds of CKDs.</li>
+             <li>Calculates the mean age of all the CKD patients.</li>
+             <li>Widget to calculate the eGFR, by manually inputing the data.</li>
+             <li>Cleans the excel file extracted from MIMIC II by dropping the missing values.</li>
+             <li>Calculates the eGFR, automatically for all the patients based on their age, gender, ethnicity and serum creatinine value</li>
 </p>
+<h4>Files Used: gfr_calc_info.xlsx</h4>
+<h3>Requirements:</h3>
+<p>
+<ul><li>Python</li><li>Jupyter Notebook</li><li>Excel</li><li>MySql</li></ul>
+</p>
+
+<h3>Authors: </h3>
+<p>Shilpy Sharma (lead), Parveen Ghani, Anjali Nandwani</p>
+
+<h3>Licence: </h3>
+<p>
+This project is licensed under the GNU License - see the LICENSE.md file for details</p>
 
