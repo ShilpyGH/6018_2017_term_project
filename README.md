@@ -48,10 +48,13 @@ It has widgets to calculate the estimated Glomerular Filteration Rate (eGFR) bas
 <ul><li>Python</li><li>Jupyter Notebook</li><li>Excel</li><li>MySql</li></ul>
 </p>
 
+<h3>Version: v1.0 released on 2017-12-21</h3>
+
 <h3>Authors: </h3>
 <p>Shilpy Sharma (lead), Parveen Ghani, Anjali Nandwani</p>
 
 <h3>Licence: </h3>
 <p>
-This project is licensed under the GNU License - see the LICENSE.md file for details</p>
+The project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007.
+See the LICENSE.md file for details</p>
 
