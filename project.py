@@ -18,10 +18,10 @@ def calc_gfr(scr, age, gender, ethnicity):
         gfr: Patient's eGFR in mL/min rounded to decimal places.
         
     """
-    if scr == 0.0 or age == 0.0:
+    if scr==0.0 or age==0.0:
         return 0
   
-    if gender == 'F' and ethnicity == 'African American':
+    if gender=='F' and ethnicity=='African American':
         egfr = round(175*(scr)**(-1.154) * age**(-0.203) * (0.742) * 1.212, 2)
     elif gender == 'F' and ethnicity != 'African American':
         egfr = round(175*(scr)**(-1.154) * age**(-0.203) * (0.742), 2)
@@ -64,7 +64,7 @@ class DiseaseFrame(dict):
                                 WHERE code IN \
                                 ("585.9", "585.1", "585.2", "585.3", \
                                 "585.4", "585.5", "585.6")\
-                                AND congestive_heart_failure = 1.0)',\
+                                AND congestive_heart_failure=1.0)',\
                                             self.conn)
         
         self['Diabetes'] = pd.read_sql('SELECT DISTINCT(subject_id) \
@@ -72,16 +72,16 @@ class DiseaseFrame(dict):
                             IN (SELECT DISTINCT(subject_id) FROM icd9\
                             WHERE code IN \
                             ("585.9", "585.1", "585.2", "585.3", "585.4",\
-                            "585.5", "585.6" ) AND \
-                            (diabetes_uncomplicated = 1.0\
-                            OR diabetes_complicated = 1.0))', self.conn)
+                            "585.5", "585.6") AND \
+                            (diabetes_uncomplicated=1.0\
+                            OR diabetes_complicated=1.0))', self.conn)
         
         self['Hypertension'] = pd.read_sql('SELECT DISTINCT(subject_id)\
                                 FROM comorbidity_scores WHERE subject_id \
                             IN (SELECT DISTINCT(subject_id) FROM icd9 \
                             WHERE code IN \
                             ("585.9", "585.1", "585.2", "585.3", "585.4", \
-                            "585.5", "585.6" ) AND hypertension = 1.0)',\
+                            "585.5", "585.6") AND hypertension=1.0)',\
                              self.conn)
                                                    
         
@@ -90,28 +90,28 @@ class DiseaseFrame(dict):
                             IN (SELECT DISTINCT(subject_id) FROM icd9 \
                             WHERE code IN \
                             ("585.9", "585.1", "585.2", "585.3", "585.4",\
-                            "585.5", "585.6" ) AND obesity = 1.0)', self.conn)
+                            "585.5", "585.6") AND obesity=1.0)', self.conn)
         
         self['Drug Abuse'] = pd.read_sql('SELECT DISTINCT(subject_id) \
                             FROM comorbidity_scores WHERE subject_id \
                             IN (SELECT DISTINCT(subject_id) FROM icd9 \
                             WHERE code IN \
                             ("585.9", "585.1", "585.2", "585.3", "585.4", \
-                            "585.5", "585.6" ) AND drug_abuse = 1.0)', self.conn)
+                            "585.5", "585.6") AND drug_abuse=1.0)', self.conn)
         
         self['Alcohol Abuse'] = pd.read_sql('SELECT DISTINCT(subject_id)\
                             FROM comorbidity_scores WHERE subject_id \
                             IN (SELECT DISTINCT(subject_id) FROM icd9\
                             WHERE code IN \
                             ("585.9", "585.1", "585.2", "585.3", "585.4","585.5", \
-                            "585.6" ) AND alcohol_abuse = 1.0)', self.conn)
+                            "585.6") AND alcohol_abuse=1.0)', self.conn)
         
         self['Liver disease'] = pd.read_sql('SELECT DISTINCT(subject_id)\
                             FROM comorbidity_scores WHERE subject_id \
                             IN (SELECT DISTINCT(subject_id) FROM icd9\
                             WHERE code IN \
                             ("585.9", "585.1", "585.2", "585.3", "585.4", "585.5", \
-                            "585.6" ) AND liver_disease = 1.0)', self.conn)
+                            "585.6") AND liver_disease=1.0)', self.conn)
         
     def create_venn(self, disease1, disease2, disease3):
         """Creates the venn diagram for the chosen diseases"""
@@ -134,7 +134,7 @@ class DiseaseFrame(dict):
         return (pd.read_sql('SELECT DISTINCT(subject_id), code, description \
                 FROM icd9 WHERE code IN \
                 ("585.9", "585.1", "585.2", "585.3", "585.4", "585.5",\
-                "585.6" )', self.conn))
+                "585.6")', self.conn))
     
     def get_patient_info(self):
         """Returns the patient information from MIMIC II"""
