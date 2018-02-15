@@ -1,5 +1,5 @@
 <h1>Chronic Kidney Disease (CKD) patients in MIMIC II</h1>
-<h3>Shilpy Sharma, Parveen Ghani, Anjali Nandwani</h3>
+<h3>Shilpy Sharma</h3>
 <h4>BMI 6018 Fall 2017 Term Project</h4>
 
 <h3>Source of data - MIMIC II database</h3>
