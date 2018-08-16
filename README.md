@@ -50,8 +50,8 @@ It has widgets to calculate the estimated Glomerular Filteration Rate (eGFR) bas
 
 <h3>Version: v1.0 released on 2017-12-21</h3>
 
-<h3>Authors: </h3>
-<p>Shilpy Sharma (lead), Parveen Ghani, Anjali Nandwani</p>
+<h3>Author: </h3>
+<p>Shilpy Sharma </p>
 
 <h3>Licence: </h3>
 <p>
